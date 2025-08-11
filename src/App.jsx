@@ -85,7 +85,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img src={polilynxLogo} alt="PoliLynx" className="h-8 w-auto" />
+              <img src={polilynxLogo} alt="PoliLynx" className="h-12 w-auto" />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-primary">PoliLynx</span>
+                <span className="text-xs text-muted-foreground hidden sm:block">Blockchain Insurance Solutions</span>
+              </div>
             </div>
             
             {/* Desktop Navigation */}
@@ -158,6 +162,10 @@ function App() {
             <Badge variant="secondary" className="mb-6 text-sm">
               Proven Seven-Figure Insurance Industry Veteran
             </Badge>
+            
+            <div className="mb-4">
+              <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">PoliLynx</span>
+            </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
               Transform Your Insurance Agency with{' '}
@@ -625,7 +633,13 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <img src={polilynxLogo} alt="PoliLynx" className="h-8 w-auto mb-4" />
+              <div className="flex items-center space-x-3 mb-4">
+                <img src={polilynxLogo} alt="PoliLynx" className="h-10 w-auto" />
+                <div className="flex flex-col">
+                  <span className="text-lg font-bold text-primary">PoliLynx</span>
+                  <span className="text-xs text-muted-foreground">Blockchain Insurance Solutions</span>
+                </div>
+              </div>
               <p className="text-muted-foreground mb-4 max-w-md">
                 Transforming insurance agencies through proven expertise and revolutionary blockchain technology. 
                 Built by industry veterans for industry leaders.
