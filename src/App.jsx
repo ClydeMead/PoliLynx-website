@@ -18,6 +18,9 @@ import {
   Star,
   Phone,
   Mail,
+  FileText,
+  Download,
+  Building2,
   MapPin,
   Menu,
   X
@@ -40,7 +43,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'platform', 'services', 'results', 'contact']
+      const sections = ['home', 'about', 'platform', 'services', 'results', 'legal', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -75,6 +78,7 @@ function App() {
     { id: 'platform', label: 'Platform' },
     { id: 'services', label: 'Services' },
     { id: 'results', label: 'Results' },
+    { id: 'legal', label: 'Legal Documents' },
     { id: 'contact', label: 'Contact' }
   ]
 
@@ -537,12 +541,127 @@ function App() {
                 </ul>
               </div>
             </div>
+          </div        </div>
+      </section>
+
+      {/* Legal Documents Section */}
+      <section id="legal" className="py-20 bg-muted/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight mb-4">Legal Documents</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Professional legal documents for SaaS platform evaluation and business acquisition discussions. 
+              All documents are DocuSign-compatible for electronic signature.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* SaaS Platform Documents */}
+            <Card className="p-6">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <FileText className="h-6 w-6 mr-2 text-primary" />
+                  SaaS Platform Documents
+                </CardTitle>
+                <CardDescription>
+                  Legal agreements for platform evaluation and implementation
+                </CardDescription>
+              </CardHeader>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div>
+                    <h4 className="font-medium">SaaS Platform NDA</h4>
+                    <p className="text-sm text-muted-foreground">Non-disclosure agreement for platform evaluation</p>
+                  </div>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/polilynx_nda_saas.pdf" download>
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div>
+                    <h4 className="font-medium">Service Agreement</h4>
+                    <p className="text-sm text-muted-foreground">Comprehensive SaaS platform service agreement</p>
+                  </div>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/polilynx_service_agreement.pdf" download>
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </Card>
+
+            {/* Business Acquisition Documents */}
+            <Card className="p-6">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Building2 className="h-6 w-6 mr-2 text-primary" />
+                  Business Acquisition Documents
+                </CardTitle>
+                <CardDescription>
+                  Legal agreements for acquisition and investment discussions
+                </CardDescription>
+              </CardHeader>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div>
+                    <h4 className="font-medium">Acquisition NDA</h4>
+                    <p className="text-sm text-muted-foreground">Mutual NDA for business acquisition discussions</p>
+                  </div>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/polilynx_nda_acquisition.pdf" download>
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 border rounded-lg">
+                  <div>
+                    <h4 className="font-medium">Letter of Intent</h4>
+                    <p className="text-sm text-muted-foreground">Template LOI for business acquisition opportunities</p>
+                  </div>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/polilynx_acquisition_loi.pdf" download>
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="p-6 bg-primary/5 border-primary/20">
+              <CardHeader>
+                <CardTitle>Need Custom Legal Documents?</CardTitle>
+                <CardDescription>
+                  Our legal team can customize these documents for your specific needs or create additional agreements.
+                </CardDescription>
+              </CardHeader>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button onClick={() => scrollToSection('contact')}>
+                  <Phone className="h-4 w-4 mr-2" />
+                  Contact Legal Team
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="tel:8018034384">
+                    <Phone className="h-4 w-4 mr-2" />
+                    (801) 803-4384
+                  </a>
+                </Button>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-muted/50">
+      <section id="contact" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4">Get Started</Badge>
