@@ -27,7 +27,8 @@ import {
 } from 'lucide-react'
 import './App.css'
 import polilynxLogo from './assets/polilynx-logo-actual.png'
-import heroBackground from './assets/hero-background.png'
+import ContactForm from './components/ContactForm.jsx'
+import DocumentRequestForm from './components/DocumentRequestForm.jsx'
 import blockchainVisualization from './assets/blockchain-visualization.png'
 import { ContactForm, LeadTracking } from './components/HubSpotIntegration.jsx'
 import { 
@@ -637,6 +638,30 @@ function App() {
 
           <div className="mt-12 text-center">
             <Card className="p-6 bg-primary/5 border-primary/20">
+              <CardHeader>
+                <CardTitle>Request Document with Electronic Signature</CardTitle>
+                <CardDescription>
+                  Get your legal documents sent directly via DocuSign for immediate electronic signature. 
+                  All requests are automatically tracked in our CRM system.
+                </CardDescription>
+              </CardHeader>
+              <div className="mt-6">
+                <DocumentRequestForm 
+                  onSuccess={(data) => {
+                    console.log('Document request successful:', data)
+                    // Additional success handling
+                  }}
+                  onError={(error) => {
+                    console.error('Document request error:', error)
+                    // Additional error handling
+                  }}
+                />
+              </div>
+            </Card>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Card className="p-6 bg-muted/50">
               <CardHeader>
                 <CardTitle>Need Custom Legal Documents?</CardTitle>
                 <CardDescription>
