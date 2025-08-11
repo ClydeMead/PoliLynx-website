@@ -117,4 +117,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Ensure PoliLynx logo has no background */
+  img[alt="PoliLynx"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    mix-blend-mode: multiply;
+  }
 }
